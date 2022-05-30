@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Observable} from "rxjs";
+import {Book} from "./models/book/book.model";
+import {BookService} from "./services/book.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BookProjectRedux';
+
+  books$: Observable<Book[]> = this.bookService.getBooks();
+
+  constructor(private bookService: BookService) {
+  }
+
 }

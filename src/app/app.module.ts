@@ -3,10 +3,14 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
+import {BookListComponent} from './components/book-list/book-list.component';
+import {BookSelectionComponent} from './components/book-selection/book-selection.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BookListComponent,
+    BookSelectionComponent
   ],
   imports: [
     BrowserModule,

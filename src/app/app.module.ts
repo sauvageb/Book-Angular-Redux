@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {BookListComponent} from './components/book-list/book-list.component';
 import {BookSelectionComponent} from './components/book-selection/book-selection.component';
+import {StateModule} from "./state/state.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {BookSelectionComponent} from './components/book-selection/book-selection
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    StateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

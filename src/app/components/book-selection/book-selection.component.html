@@ -1,1 +1,32 @@
-<p>book-selection works!</p>
+<h2>Books Selection</h2>
+<div class="container">
+
+  <div class="col mt-3" *ngIf="books!.length > 0">
+    <button type="button"
+            (click)="paySelection()"
+            style="width: 100%" class="btn btn-success btn-lg btn-block">Pay</button>
+  </div>
+
+  <div class="col mt-3" *ngFor="let book of books">
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          Livre : {{book.volumeInfo.title}}
+        </li>
+        <li class="list-group-item">
+          Auteur: {{book.volumeInfo.authors}}
+        </li>
+        <li class="list-group-item">
+          ISBN: {{book.volumeInfo.industryIdentifiers[1].identifier}}
+        </li>
+      </ul>
+
+      <div class="card-footer">
+        <button type="button" class="btn btn-sm btn-outline-secondary"
+                (click)="removeFromCollection(book)">Remove from Collection
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

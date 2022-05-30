@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Book} from "../../models/book/book.model";
 
 @Component({
   selector: 'app-book-selection',
   templateUrl: './book-selection.component.html',
   styleUrls: ['./book-selection.component.css']
 })
-export class BookSelectionComponent implements OnInit {
+export class BookSelectionComponent {
 
-  constructor() { }
+  @Input()
+  books: Book[] = [];
 
-  ngOnInit(): void {
+  removeFromCollection(book: Book) {
+  }
+
+  paySelection() {
   }
 
 }

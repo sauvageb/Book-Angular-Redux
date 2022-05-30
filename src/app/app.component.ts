@@ -11,6 +11,7 @@ import {BookService} from "./services/book.service";
 export class AppComponent {
 
   books$: Observable<Book[]> = this.bookService.getBooks();
+  booksSelection$: Observable<Book[]> = this.bookService.getBooks();
 
   constructor(private bookService: BookService) {
   }

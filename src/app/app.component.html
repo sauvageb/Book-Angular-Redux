@@ -6,8 +6,9 @@
     </div>
 
     <div class="col-3" style="background-color: #e6e6e6">
-      <app-book-selection></app-book-selection>
+      <app-book-selection [books]="(booksSelection$ | async) ?? []"></app-book-selection>
     </div>
 
   </div>
 </div>
+
